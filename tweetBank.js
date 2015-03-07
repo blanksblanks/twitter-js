@@ -24,14 +24,14 @@ var randArrayEl = function(arr) {
 };
 
 var getFakeName = function() {
-  var fakeFirsts = ['Nimit', 'Dave', 'Will', 'Charlotte', 'Jacob','Ethan','Sophia','Emma','Madison'];
-  var fakeLasts = ["Alley", 'Stacky', 'Fullstackerson', 'Nerd', 'Ashby', 'Gatsby', 'Hazelnut', 'Cookie', 'Tilde', 'Dash'];
+  var fakeFirsts = ['Happy', 'Lucky', 'Hapi', 'Haps', 'Hahahappy','Happylicious','Happay','Happito','Happy-go-lucky'];
+  var fakeLasts = ['Shiba', 'the Shiba', 'Puppy', 'the Dog', 'the Inu', 'Inu', 'Shiba Inu', 'Papi', 'the Shiba Inu', 'the Puppy Inu'];
   return randArrayEl(fakeFirsts) + " " + randArrayEl(fakeLasts);
 };
 
 var getFakeTweet = function() {
-  var awesome_adj = ['awesome','breathtaking','amazing','sexy','sweet','cool','wonderful','mindblowing'];
-  return "Fullstack Academy is " + randArrayEl(awesome_adj) + "! The instructors are just so " + randArrayEl(awesome_adj) + ". #fullstacklove #codedreams";
+  var awesome_adj = ['awesome','breathtaking','amazing','sexy','sweet','cool','wonderful','mindblowing','tasty','fantastic','captivating','cute','beautiful','amazeballs'];
+  return "Molly is " + randArrayEl(awesome_adj) + "! You are just so " + randArrayEl(awesome_adj) + ". #whenhappymetmolly #shibacatlove";
 };
 
 for(var i=0; i<10; i++) {

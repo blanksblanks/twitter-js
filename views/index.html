@@ -3,19 +3,26 @@
 {% block content %}
 
   <div class="page-header">
-    <h1>Welcome to Twitter.js, Nimit!</h1>
+    <h1>Welcome to Twitter.js, Molly!</h1>
   </div>
   <div class="row">
     <div class="col-md-3">
-      <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg"><br>
-      <b>Your Name</b><br>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2yFm-9fT_RDcQtbYkYwS57rrczH8cZp5fTa7ZD0I2L7c4uXJj"><br>
+      <b>Molly MeowMeow</b><br>
       100 followers
     </div>
     <div class="col-md-9">
 
       <!-- display tweets here -->
+      <h4> All Tweets </h4>
       {% for tweet in tweets %}
-        <li>{{tweet.text}}</li>
+      <img src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-19/10995232_790574297678121_1164715258_a.jpg"><br>
+
+      <b><a href="/users/{{tweet.name}}">{{tweet.name}}</a></b><br>
+      {{ tweet.text }}<br>
+      <a href ="#">Re-Tweet</a><br><br>
+      <div class="clear"></div>
+
       {% endfor %}
 
     </div>
