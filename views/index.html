@@ -17,9 +17,9 @@
       <h4> All Tweets </h4>
       {% for tweet in tweets %}
       <img src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-19/10995232_790574297678121_1164715258_a.jpg"><br>
-
+      <!--add links to user profiles-->
       <b><a href="/users/{{tweet.name}}">{{tweet.name}}</a></b><br>
-      {{ tweet.text }}<br>
+      <a href="/users/{{tweet.name}}/tweets/{{tweet.id}}">{{ tweet.text }}</a><br>
       <a href ="#">Re-Tweet</a><br><br>
       <div class="clear"></div>
 

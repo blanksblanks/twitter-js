@@ -19,9 +19,9 @@ router.get('/users/:name', function(req, res) {
 
 
 router.get('/users/:name/tweets/:id', function(req, res) {
-  var id = req.params.id;
+  var id = parseInt(req.params.id);
   var list = tweetBank.find( {id: id} );
-  //console.log(list);
+  console.log(list);
   res.render( 'index', {title: 'Tweet '+ id, tweets: list } );
 });
 

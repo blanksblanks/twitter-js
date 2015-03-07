@@ -3,7 +3,8 @@ var _ = require('underscore');
 data = []
 
 var add = function (name, text) {
-  data.push({ name: name, text: text });
+  data.push({ name: name, text: text, id: Math.floor((Math.random() * 100) + 1) });
+  // console.log('data', data);
 };
 
 // look up clone and where
@@ -13,6 +14,7 @@ var list = function () {
 };
 
 var find = function (properties) {
+  // console.log("properties", properties);
   return _.where(data, properties);
 };
 
@@ -34,6 +36,7 @@ var getFakeTweet = function() {
   return "Molly is " + randArrayEl(awesome_adj) + "! You are just so " + randArrayEl(awesome_adj) + ". #whenhappymetmolly #shibacatlove";
 };
 
+// every time server restarts, seeded with random data
 for(var i=0; i<10; i++) {
   module.exports.add( getFakeName(), getFakeTweet() );
 }
