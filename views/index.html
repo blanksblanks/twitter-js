@@ -13,9 +13,21 @@
     </div>
     <div class="col-md-9">
 
+  {% if showForm %}
+    <form action="/submit" method="POST">
+      <label for="name_field">Name:</label>
+      <input name="name" type="text" id="name_field" value="Happy the Shiba">
+
+      <label for="text_field">Text:</label>
+      <input name="text" type="text" id="text_field" style="width: 350px;" />
+
+      <input type="submit" value="Submit" />
+    </form>
+  {% endif %}
+
       <!-- display tweets here -->
-      <h4> All Tweets </h4>
-      {% for tweet in tweets %}
+    <h4> All Tweets </h4>
+    {% for tweet in tweets %}
       <img src="https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-19/10995232_790574297678121_1164715258_a.jpg"><br>
       <!--add links to user profiles-->
       <b><a href="/users/{{tweet.name}}">{{tweet.name}}</a></b><br>
@@ -23,7 +35,7 @@
       <a href ="#">Re-Tweet</a><br><br>
       <div class="clear"></div>
 
-      {% endfor %}
+    {% endfor %}
 
     </div>
   </div>
