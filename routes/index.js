@@ -40,9 +40,11 @@ module.exports = function(io) {
 
   // pull form info out of req.body and push into data astore
   router.post('/submit', function(req, res) {
+    JSON.stringify(req.body, null, 2);
     var name = req.body.name;
     var text = req.body.text;
     tweetBank.add(name, text);
+    // io.sockets.emit('new_tweet', { name: name, text: text });
     res.redirect('/'); // refresh page immediately see new tweet
   });
 
